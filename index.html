@@ -27,7 +27,7 @@
       <div class="container">
         <!--div - це контейнер, що містить всі інші елементи header-->
         <nav class="page-nav">
-          <a class="page-logo" href="./index.html"
+          <a class="page-logo header-logo" href="./index.html"
             >Web<span class="page-logo-accent">Studio</span></a
           >
           <ul class="link-list">
@@ -52,6 +52,11 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!--#endregion header-->
@@ -59,7 +64,7 @@
     <main>
       <!--#region hero-image Перша секція-->
 
-      <section class="hero-image">
+      <section class="hero-image hidden">
         <div class="container">
           <h1 class="hero-image-title">
             Effective Solutions for Your Business
@@ -72,7 +77,7 @@
 
       <!--#region features Друга секція-->
 
-      <section class="features">
+      <section class="features hidden">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="features-list">
@@ -132,7 +137,7 @@
 
       <!--#region our-team Третя секція-->
 
-      <section class="team">
+      <section class="team hidden">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
@@ -312,7 +317,7 @@
 
       <!--#region our-portfolio Четверта секція-->
 
-      <section class="portfolio">
+      <section class="portfolio hidden">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="list">
@@ -426,7 +431,7 @@
     </main>
     <!--#region footer-->
 
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container">
         <div class="footer-logo-text">
           <a class="page-logo" href="./index.html"
@@ -494,7 +499,7 @@
 
     <!--#endregion footer-->
     <!--#region popup-->
-    <div class="backdrop">
+    <div class="backdrop hidden-popup hidden">
       <!--hidden-popup Додай для приховання модального вікна-->
       <div class="popup">
         <button class="popup-exit" type="button">
