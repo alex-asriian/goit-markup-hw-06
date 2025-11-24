@@ -194,3 +194,414 @@ button {
   }
 }
 /*#endregion header*/
+
+/*#region mobile menu*/
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-menu .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mobile-menu-container {
+  flex-direction: column;
+  align-items: start;
+  height: 100%;
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.mobile-menu-close-icon {
+  display: block;
+  fill: #2e2f42;
+  stroke: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-close:hover .mobile-menu-close-icon {
+  fill: #ffffff;
+}
+.mobile-menu-close:focus .mobile-menu-close-icon {
+  fill: #ffffff;
+}
+
+.mobile-menu-nav {
+  margin-bottom: auto;
+}
+.mobile-menu-nav-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 0;
+}
+.mobile-menu-nav-list-item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-nav-list-item:hover,
+.mobile-menu-nav-list-item:focus {
+  color: #404bbf;
+}
+.mobile-menu-contacts {
+  font-style: normal;
+  display: flex;
+  margin-bottom: 48px;
+}
+.mobile-menu-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #434455;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.mobile-menu-contacts-list-item {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-contacts-list-item:hover,
+.mobile-menu-contacts-list-item:focus {
+  color: #4d5ae5;
+}
+.mobile-menu-socials-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.mobile-menu-socials-list-item {
+  width: 40px;
+  height: 40px;
+}
+.mobile-menu-socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-socials-link:hover,
+.mobile-menu-socials-link:focus {
+  background-color: #404bbf;
+}
+.mobile-menu-socials-icons {
+  fill: #f4f4fd;
+}
+/*#endregion mobile menu*/
+
+/*#region hero-image Перша секція*/
+.hero-image {
+  margin-bottom: 96px;
+  max-width: 320px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)),
+    url('../images/people-office-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-image .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-image-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin: 0 auto;
+  padding: 72px 0;
+  text-align: center;
+  max-width: 216px;
+}
+.ordinary-button {
+  display: block;
+  margin: 0 auto 72px;
+  min-width: 169px;
+  border: none;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  padding: 16px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ordinary-button:hover,
+.ordinary-button:focus {
+  background-color: #404bbf;
+}
+@media screen and (min-width: 768px) {
+  .hero-image {
+    max-width: 768px;
+  }
+  .hero-image-title {
+    font-size: 56px;
+    line-height: 1.07;
+    padding: 112px 0 36px;
+    max-width: 496px;
+  }
+  .ordinary-button {
+    margin: 0 auto 112px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .hero-image {
+    max-width: 1158px;
+  }
+  .hero-image-title {
+    padding: 188px 0 48px;
+  }
+  .ordinary-button {
+    margin: 0 auto 188px;
+  }
+}
+/*#endregion hero-image Перша секція*/
+
+/*#region features Друга секція*/
+.features {
+  margin-bottom: 96px;
+}
+.features-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+.features-icons-container {
+  display: none;
+}
+.features-list {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 72px;
+}
+.features-list-item {
+  max-width: 288px;
+}
+.features-category {
+  font-size: 36px;
+  line-height: 1.11;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.features-desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+@media screen and (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .features-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .features-category {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .features {
+    margin-bottom: 120px;
+  }
+  .features-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .features-category {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .features-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: #f4f4fd;
+  }
+  .features-desc {
+    font-weight: 400;
+  }
+}
+/*#endregion features*/
+
+/*#region our-team Третя секція*/
+.team {
+  padding: 96px 0;
+  margin-bottom: 112px;
+  background-color: #f4f4fd;
+}
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+.team-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+.team-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 0 0 4px 4px;
+  min-width: 264px;
+}
+.team-person {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.team-person-post {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-align: center;
+}
+
+.team-socials {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding-top: 8px;
+}
+.socials-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding-top: 8px;
+}
+.socials-list-item {
+  width: 40px;
+  height: 40px;
+}
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: #404bbf;
+}
+.team-socials-icons {
+  fill: #f4f4fd;
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .team-list-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .team {
+    padding: 120px 0;
+  }
+}
+/*#endregion our-team Третя секція*/
